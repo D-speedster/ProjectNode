@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات فیلم - سینما استریم</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Persian Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="logo-section">
+                        <img src="https://via.placeholder.com/70x70/e50914/ffffff?text=LOGO" alt="لوگو" class="logo-web">
+                        <div class="logo-text">
+                            <h1 class="brand-name">سینما استریم</h1>
+                            <p class="brand-slogan">بهترین فیلم‌ها و سریال‌ها</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8 col-md-6">
+                    <div class="header-actions">
+                        <div class="user-menu">
+                            <a href="#" class="login-btn">
+                                <i class="fas fa-user"></i>
+                                <span>ورود / ثبت‌نام</span>
+                            </a>
+                            <a href="#" class="admin-btn">
+                                <i class="fas fa-cog"></i>
+                                <span>پنل مدیریت</span>
+                            </a>
+                        </div>
+                        
+                        <div class="header-info">
+                            <div class="info-item">
+                                <i class="fas fa-film"></i>
+                                <span>۱۲,۵۰۰ فیلم</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tv"></i>
+                                <span>۳,۲۰۰ سریال</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-special mb-4">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav me-auto">
+                    <a class="nav-link" href="index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>خانه</span>
+                    </a>
+                    <a class="nav-link active" href="movies.html">
+                        <i class="fa-solid fa-clapperboard"></i>
+                        <span>فیلم‌ها</span>
+                    </a>
+                    <a class="nav-link" href="series.html">
+                        <i class="fa-solid fa-tv"></i>
+                        <span>سریال‌ها</span>
+                    </a>
+                    <a class="nav-link" href="#anime">
+                        <i class="fa-solid fa-dragon"></i>
+                        <span>انیمیشن</span>
+                    </a>
+                    <a class="nav-link" href="#documentary">
+                        <i class="fa-solid fa-video"></i>
+                        <span>مستند</span>
+                    </a>
+                    <a class="nav-link" href="#news">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span>اخبار</span>
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="search" placeholder="جستجو در فیلم‌ها و سریال‌ها..." class="search-input">
+                        <button class="search-btn-action">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-results">
+                        <!-- نتایج جستجو اینجا نمایش داده می‌شود -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Movie Detail Section -->
+    <main class="movie-detail-main">
+        <div class="container">
+            <!-- Movie Hero Section -->
+            <section class="movie-hero">
+                <div class="movie-backdrop">
+                    <img src="https://via.placeholder.com/1920x800/1a1a1a/ffffff?text=Movie+Backdrop" alt="پس‌زمینه فیلم" class="backdrop-image">
+                    <div class="backdrop-overlay"></div>
+                </div>
+                
+                <div class="movie-hero-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="movie-poster-container">
+                                <img src="https://via.placeholder.com/400x600/e50914/ffffff?text=Movie+Poster" alt="پوستر فیلم" class="movie-poster">
+                                <div class="poster-overlay">
+                                    <button class="play-trailer-btn">
+                                        <i class="fas fa-play"></i>
+                                        <span>تریلر</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-8 col-md-7">
+                            <div class="movie-info">
+                                <div class="movie-badges">
+                                    <span class="badge quality-badge">4K</span>
+                                    <span class="badge subtitle-badge">زیرنویس فارسی</span>
+                                    <span class="badge dubbing-badge">دوبله فارسی</span>
+                                </div>
+                                
+                                <h1 class="movie-title">اونجرز: پایان بازی</h1>
+                                <h2 class="movie-original-title">Avengers: Endgame</h2>
+                                
+                                <div class="movie-meta">
+                                    <div class="meta-item">
+                                        <i class="fas fa-star"></i>
+                                        <span class="rating">8.4</span>
+                                        <span class="rating-count">(۱۲,۳۴۵ رای)</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۳ ساعت ۱ دقیقه</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>۲۰۱۹</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-flag"></i>
+                                        <span>آمریکا</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="movie-genres">
+                                    <span class="genre-tag">اکشن</span>
+                                    <span class="genre-tag">ماجراجویی</span>
+                                    <span class="genre-tag">علمی-تخیلی</span>
+                                    <span class="genre-tag">درام</span>
+                                </div>
+                                
+                                <p class="movie-description">
+                                    پس از وقایع ویرانگر جنگ بی‌نهایت، جهان در ویرانی فرو رفته و نیمی از همه موجودات زنده توسط تانوس نابود شده‌اند. با کمک متحدان باقی‌مانده، اونجرز یک بار دیگر گرد هم می‌آیند تا اعمال تانوس را واژگون کنند و نظم را به جهان بازگردانند.
+                                </p>
+                                
+                                <div class="movie-actions">
+                                    <button class="btn-primary watch-btn">
+                                        <i class="fas fa-play"></i>
+                                        <span>تماشای آنلاین</span>
+                                    </button>
+                                    <button class="btn-secondary download-btn">
+                                        <i class="fas fa-download"></i>
+                                        <span>دانلود</span>
+                                    </button>
+                                    <button class="btn-outline favorite-btn">
+                                        <i class="fas fa-heart"></i>
+                                        <span>علاقه‌مندی</span>
+                                    </button>
+                                    <button class="btn-outline share-btn">
+                                        <i class="fas fa-share"></i>
+                                        <span>اشتراک‌گذاری</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Movie Details Tabs -->
+            <section class="movie-details-section">
+                <div class="details-tabs">
+                    <ul class="nav nav-tabs" id="movieTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="cast-tab" data-bs-toggle="tab" data-bs-target="#cast" type="button" role="tab">
+                                <i class="fas fa-users"></i>
+                                <span>بازیگران و عوامل</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab">
+                                <i class="fas fa-images"></i>
+                                <span>گالری تصاویر</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="comments-tab" data-bs-toggle="tab" data-bs-target="#comments" type="button" role="tab">
+                                <i class="fas fa-comments"></i>
+                                <span>نظرات کاربران</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="download-tab" data-bs-toggle="tab" data-bs-target="#download" type="button" role="tab">
+                                <i class="fas fa-download"></i>
+                                <span>لینک‌های دانلود</span>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="movieTabsContent">
+                        <!-- Cast Tab -->
+                        <div class="tab-pane fade show active" id="cast" role="tabpanel">
+                            <div class="cast-section">
+                                <h3 class="section-title">بازیگران اصلی</h3>
+                                <div class="cast-grid">
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/150x200/333/fff?text=Actor" alt="بازیگر" class="cast-photo">
+                                        <div class="cast-info">
+                                            <h4 class="cast-name">رابرت داونی جونیور</h4>
+                                            <p class="cast-character">تونی استارک / آیرن من</p>
+                                        </div>
+                                    </div>
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/150x200/333/fff?text=Actor" alt="بازیگر" class="cast-photo">
+                                        <div class="cast-info">
+                                            <h4 class="cast-name">کریس ایوانز</h4>
+                                            <p class="cast-character">استیو راجرز / کاپیتان آمریکا</p>
+                                        </div>
+                                    </div>
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/150x200/333/fff?text=Actor" alt="بازیگر" class="cast-photo">
+                                        <div class="cast-info">
+                                            <h4 class="cast-name">مارک رافالو</h4>
+                                            <p class="cast-character">بروس بنر / هالک</p>
+                                        </div>
+                                    </div>
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/150x200/333/fff?text=Actor" alt="بازیگر" class="cast-photo">
+                                        <div class="cast-info">
+                                            <h4 class="cast-name">کریس همسورث</h4>
+                                            <p class="cast-character">ثور</p>
+                                        </div>
+                                    </div>
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/150x200/333/fff?text=Actor" alt="بازیگر" class="cast-photo">
+                                        <div class="cast-info">
+                                            <h4 class="cast-name">اسکارلت جوهانسون</h4>
+                                            <p class="cast-character">ناتاشا رومانوف / بلک ویدو</p>
+                                        </div>
+                                    </div>
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/150x200/333/fff?text=Actor" alt="بازیگر" class="cast-photo">
+                                        <div class="cast-info">
+                                            <h4 class="cast-name">جرمی رنر</h4>
+                                            <p class="cast-character">کلینت بارتون / هاوک‌آی</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="section-title mt-5">عوامل فیلم</h3>
+                                <div class="crew-list">
+                                    <div class="crew-item">
+                                        <span class="crew-role">کارگردان:</span>
+                                        <span class="crew-name">آنتونی و جو روسو</span>
+                                    </div>
+                                    <div class="crew-item">
+                                        <span class="crew-role">نویسنده:</span>
+                                        <span class="crew-name">کریستوفر مارکوس، استیون مک‌فیلی</span>
+                                    </div>
+                                    <div class="crew-item">
+                                        <span class="crew-role">تهیه‌کننده:</span>
+                                        <span class="crew-name">کوین فایگی</span>
+                                    </div>
+                                    <div class="crew-item">
+                                        <span class="crew-role">موسیقی:</span>
+                                        <span class="crew-name">آلن سیلوستری</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Tab -->
+                        <div class="tab-pane fade" id="gallery" role="tabpanel">
+                            <div class="gallery-section">
+                                <h3 class="section-title">تصاویر فیلم</h3>
+                                <div class="gallery-grid">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x250/333/fff?text=Gallery+1" alt="تصویر فیلم" class="gallery-image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-search-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x250/333/fff?text=Gallery+2" alt="تصویر فیلم" class="gallery-image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-search-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x250/333/fff?text=Gallery+3" alt="تصویر فیلم" class="gallery-image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-search-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x250/333/fff?text=Gallery+4" alt="تصویر فیلم" class="gallery-image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-search-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x250/333/fff?text=Gallery+5" alt="تصویر فیلم" class="gallery-image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-search-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x250/333/fff?text=Gallery+6" alt="تصویر فیلم" class="gallery-image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-search-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Comments Tab -->
+                        <div class="tab-pane fade" id="comments" role="tabpanel">
+                            <div class="comments-section">
+                                <h3 class="section-title">نظرات کاربران</h3>
+                                
+                                <div class="comment-form">
+                                    <h4>نظر خود را بنویسید</h4>
+                                    <form>
+                                        <div class="rating-input">
+                                            <label>امتیاز شما:</label>
+                                            <div class="stars">
+                                                <i class="fas fa-star" data-rating="1"></i>
+                                                <i class="fas fa-star" data-rating="2"></i>
+                                                <i class="fas fa-star" data-rating="3"></i>
+                                                <i class="fas fa-star" data-rating="4"></i>
+                                                <i class="fas fa-star" data-rating="5"></i>
+                                            </div>
+                                        </div>
+                                        <textarea class="form-control" rows="4" placeholder="نظر خود را اینجا بنویسید..."></textarea>
+                                        <button type="submit" class="btn-primary mt-3">ارسال نظر</button>
+                                    </form>
+                                </div>
+                                
+                                <div class="comments-list">
+                                    <div class="comment-item">
+                                        <div class="comment-header">
+                                            <div class="user-info">
+                                                <img src="https://via.placeholder.com/50x50/e50914/fff?text=U" alt="کاربر" class="user-avatar">
+                                                <div class="user-details">
+                                                    <h5 class="username">علی احمدی</h5>
+                                                    <div class="comment-rating">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="comment-date">۲ روز پیش</span>
+                                        </div>
+                                        <p class="comment-text">فیلم فوق‌العاده‌ای بود! پایان مناسبی برای مجموعه اونجرز. صحنه‌های اکشن عالی و داستان جذاب.</p>
+                                        <div class="comment-actions">
+                                            <button class="like-btn">
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <span>۱۲</span>
+                                            </button>
+                                            <button class="dislike-btn">
+                                                <i class="fas fa-thumbs-down"></i>
+                                                <span>۱</span>
+                                            </button>
+                                            <button class="reply-btn">
+                                                <i class="fas fa-reply"></i>
+                                                <span>پاسخ</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comment-item">
+                                        <div class="comment-header">
+                                            <div class="user-info">
+                                                <img src="https://via.placeholder.com/50x50/e50914/fff?text=U" alt="کاربر" class="user-avatar">
+                                                <div class="user-details">
+                                                    <h5 class="username">سارا محمدی</h5>
+                                                    <div class="comment-rating">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="comment-date">۵ روز پیش</span>
+                                        </div>
+                                        <p class="comment-text">فیلم خوبی بود اما کمی طولانی. صحنه‌های عاطفی خیلی تأثیرگذار بودند.</p>
+                                        <div class="comment-actions">
+                                            <button class="like-btn">
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <span>۸</span>
+                                            </button>
+                                            <button class="dislike-btn">
+                                                <i class="fas fa-thumbs-down"></i>
+                                                <span>۰</span>
+                                            </button>
+                                            <button class="reply-btn">
+                                                <i class="fas fa-reply"></i>
+                                                <span>پاسخ</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Download Tab -->
+                        <div class="tab-pane fade" id="download" role="tabpanel">
+                            <div class="download-section">
+                                <h3 class="section-title">لینک‌های دانلود</h3>
+                                
+                                <div class="download-options">
+                                    <div class="quality-section">
+                                        <h4 class="quality-title">کیفیت 4K (2160p)</h4>
+                                        <div class="download-links">
+                                            <a href="#" class="download-link">
+                                                <div class="link-info">
+                                                    <i class="fas fa-download"></i>
+                                                    <div class="link-details">
+                                                        <span class="link-title">دانلود مستقیم - 4K</span>
+                                                        <span class="link-size">۱۲.۵ گیگابایت</span>
+                                                    </div>
+                                                </div>
+                                                <span class="link-format">MP4</span>
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <div class="link-info">
+                                                    <i class="fas fa-magnet"></i>
+                                                    <div class="link-details">
+                                                        <span class="link-title">دانلود تورنت - 4K</span>
+                                                        <span class="link-size">۱۲.۵ گیگابایت</span>
+                                                    </div>
+                                                </div>
+                                                <span class="link-format">TORRENT</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="quality-section">
+                                        <h4 class="quality-title">کیفیت Full HD (1080p)</h4>
+                                        <div class="download-links">
+                                            <a href="#" class="download-link">
+                                                <div class="link-info">
+                                                    <i class="fas fa-download"></i>
+                                                    <div class="link-details">
+                                                        <span class="link-title">دانلود مستقیم - 1080p</span>
+                                                        <span class="link-size">۶.۲ گیگابایت</span>
+                                                    </div>
+                                                </div>
+                                                <span class="link-format">MP4</span>
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <div class="link-info">
+                                                    <i class="fas fa-magnet"></i>
+                                                    <div class="link-details">
+                                                        <span class="link-title">دانلود تورنت - 1080p</span>
+                                                        <span class="link-size">۶.۲ گیگابایت</span>
+                                                    </div>
+                                                </div>
+                                                <span class="link-format">TORRENT</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="quality-section">
+                                        <h4 class="quality-title">کیفیت HD (720p)</h4>
+                                        <div class="download-links">
+                                            <a href="#" class="download-link">
+                                                <div class="link-info">
+                                                    <i class="fas fa-download"></i>
+                                                    <div class="link-details">
+                                                        <span class="link-title">دانلود مستقیم - 720p</span>
+                                                        <span class="link-size">۳.۱ گیگابایت</span>
+                                                    </div>
+                                                </div>
+                                                <span class="link-format">MP4</span>
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <div class="link-info">
+                                                    <i class="fas fa-magnet"></i>
+                                                    <div class="link-details">
+                                                        <span class="link-title">دانلود تورنت - 720p</span>
+                                                        <span class="link-size">۳.۱ گیگابایت</span>
+                                                    </div>
+                                                </div>
+                                                <span class="link-format">TORRENT</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="download-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>برای دانلود فایل‌های تورنت از نرم‌افزارهای مناسب استفاده کنید. همه فایل‌ها دارای زیرنویس فارسی هستند.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Related Movies -->
+            <section class="related-movies-section">
+                <h3 class="section-title">فیلم‌های مشابه</h3>
+                <div class="related-movies-grid">
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="https://via.placeholder.com/300x450/333/fff?text=Related+1" alt="فیلم مشابه" class="card-poster">
+                            <div class="card-overlay">
+                                <div class="card-actions">
+                                    <button class="action-btn play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="action-btn info-btn">
+                                        <i class="fas fa-info"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">آیرن من</h4>
+                            <div class="card-meta">
+                                <span class="card-year">۲۰۰۸</span>
+                                <span class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    ۷.۹
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="https://via.placeholder.com/300x450/333/fff?text=Related+2" alt="فیلم مشابه" class="card-poster">
+                            <div class="card-overlay">
+                                <div class="card-actions">
+                                    <button class="action-btn play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="action-btn info-btn">
+                                        <i class="fas fa-info"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">کاپیتان آمریکا</h4>
+                            <div class="card-meta">
+                                <span class="card-year">۲۰۱۱</span>
+                                <span class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    ۶.۹
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="https://via.placeholder.com/300x450/333/fff?text=Related+3" alt="فیلم مشابه" class="card-poster">
+                            <div class="card-overlay">
+                                <div class="card-actions">
+                                    <button class="action-btn play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="action-btn info-btn">
+                                        <i class="fas fa-info"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">ثور</h4>
+                            <div class="card-meta">
+                                <span class="card-year">۲۰۱۱</span>
+                                <span class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    ۷.۰
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="https://via.placeholder.com/300x450/333/fff?text=Related+4" alt="فیلم مشابه" class="card-poster">
+                            <div class="card-overlay">
+                                <div class="card-actions">
+                                    <button class="action-btn play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="action-btn info-btn">
+                                        <i class="fas fa-info"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">اونجرز</h4>
+                            <div class="card-meta">
+                                <span class="card-year">۲۰۱۲</span>
+                                <span class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    ۸.۰
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">درباره سینما استریم</h5>
+                        <p class="footer-text">
+                            سینما استریم بهترین پلتفرم تماشای آنلاین فیلم و سریال با کیفیت بالا و زیرنویس فارسی است.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">دسترسی سریع</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">فیلم‌های جدید</a></li>
+                            <li><a href="#">سریال‌های محبوب</a></li>
+                            <li><a href="#">انیمیشن‌ها</a></li>
+                            <li><a href="#">مستندها</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">ژانرها</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">اکشن</a></li>
+                            <li><a href="#">درام</a></li>
+                            <li><a href="#">کمدی</a></li>
+                            <li><a href="#">علمی-تخیلی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">تماس با ما</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@cinemastream.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            © ۲۰۲۴ سینما استریم. تمامی حقوق محفوظ است.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-bottom-links">
+                            <a href="#">حریم خصوصی</a>
+                            <a href="#">شرایط استفاده</a>
+                            <a href="#">پشتیبانی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

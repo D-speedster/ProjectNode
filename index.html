@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieClub | مووی کلاب</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Persian Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="logo-section">
+                        <img class="logo-web" alt="MovieClub Logo" src="public/img/movie-club-banner-2x.png">
+                        <div class="logo-text">
+                            <h2 class="brand-name">مووی کلاب</h2>
+                            <p class="brand-slogan">بهترین فیلم‌ها و سریال‌ها</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="header-actions">
+                        <div class="user-menu">
+                            <a href="login.html" class="login-btn">
+                                <i class="fas fa-user"></i>
+                                <span>ورود / ثبت‌نام</span>
+                            </a>
+                            <a href="admin.html" class="admin-btn">
+                                <i class="fas fa-cog"></i>
+                                <span>پنل مدیریت</span>
+                            </a>
+                        </div>
+                        <div class="header-info">
+                            <div class="info-item">
+                                <i class="fas fa-film"></i>
+                                <span>+۱۰۰۰ فیلم</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tv"></i>
+                                <span>+۵۰۰ سریال</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-special mb-4">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav me-auto">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>خانه</span>
+                    </a>
+                    <a class="nav-link" href="movies.html">
+                        <i class="fa-solid fa-clapperboard"></i>
+                        <span>فیلم‌ها</span>
+                    </a>
+                    <a class="nav-link" href="series.html">
+                        <i class="fa-solid fa-tv"></i>
+                        <span>سریال‌ها</span>
+                    </a>
+                    <a class="nav-link" href="#anime">
+                        <i class="fa-solid fa-dragon"></i>
+                        <span>انیمیشن</span>
+                    </a>
+                    <a class="nav-link" href="#documentary">
+                        <i class="fa-solid fa-video"></i>
+                        <span>مستند</span>
+                    </a>
+                    <a class="nav-link" href="#news">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span>اخبار</span>
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="search" placeholder="جستجو در فیلم‌ها و سریال‌ها..." class="search-input">
+                        <button class="search-btn-action">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-results">
+                        <!-- نتایج جستجو اینجا نمایش داده می‌شود -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">مووی کلاب</h1>
+                        <p class="hero-subtitle">بهترین مقصد برای تماشای فیلم و سریال با کیفیت عالی</p>
+                        <div class="hero-buttons">
+                            <a href="movies.html" class="btn btn-primary hero-btn">
+                                <i class="fas fa-play"></i>
+                                مشاهده فیلم‌ها
+                            </a>
+                            <a href="series.html" class="btn btn-outline-light hero-btn">
+                                <i class="fas fa-tv"></i>
+                                مشاهده سریال‌ها
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="public/img/cinema.jpg" alt="Cinema" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class="coming-soon-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-clock"></i>
+                        به زودی
+                    </h2>
+                    <a href="#" class="view-all-btn">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="public/img/antman.jpg" alt="Ant-Man 3" class="img-fluid">
+                                <div class="movie-overlay">
+                                    <div class="movie-actions">
+                                        <button class="btn-play">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-info">
+                                            <i class="fas fa-info"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="release-badge">
+                                    <i class="fas fa-calendar"></i>
+                                    ۱۵ اسفند ۱۴۰۲
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <h5 class="movie-title">مرد مورچه‌ای ۳</h5>
+                                <p class="movie-genre">اکشن، ماجراجویی</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="public/img/flash.jpg" alt="Flash Movie" class="img-fluid">
+                                <div class="movie-overlay">
+                                    <div class="movie-actions">
+                                        <button class="btn-play">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-info">
+                                            <i class="fas fa-info"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="release-badge">
+                                    <i class="fas fa-calendar"></i>
+                                    ۲۰ اسفند ۱۴۰۲
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <h5 class="movie-title">فلش</h5>
+                                <p class="movie-genre">اکشن، علمی تخیلی</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="public/img/batman.jpg" alt="Batman 2" class="img-fluid">
+                                <div class="movie-overlay">
+                                    <div class="movie-actions">
+                                        <button class="btn-play">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-info">
+                                            <i class="fas fa-info"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="release-badge">
+                                    <i class="fas fa-calendar"></i>
+                                    ۲۵ اسفند ۱۴۰۲
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <h5 class="movie-title">بتمن ۲</h5>
+                                <p class="movie-genre">اکشن، جنایی</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Popular Series Section -->
+        <section class="popular-series-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-tv"></i>
+                        سریال‌های محبوب
+                    </h2>
+                    <a href="series.html" class="view-all-btn">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="series-card">
+                            <div class="series-poster">
+                                <img src="public/img/555.jpg" alt="Breaking Bad" class="img-fluid">
+                                <div class="series-overlay">
+                                    <div class="series-actions">
+                                        <button class="btn-play">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-info">
+                                            <i class="fas fa-info"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="series-badge top">TOP</div>
+                            </div>
+                            <div class="series-info">
+                                <h5 class="series-title">بریکینگ بد</h5>
+                                <p class="series-meta">۵ فصل • ۶۲ قسمت</p>
+                                <div class="series-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-score">۹.۵</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="series-card">
+                            <div class="series-poster">
+                                <img src="public/img/666.jpg" alt="Game of Thrones" class="img-fluid">
+                                <div class="series-overlay">
+                                    <div class="series-actions">
+                                        <button class="btn-play">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-info">
+                                            <i class="fas fa-info"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="series-badge hot">HOT</div>
+                            </div>
+                            <div class="series-info">
+                                <h5 class="series-title">بازی تاج و تخت</h5>
+                                <p class="series-meta">۸ فصل • ۷۳ قسمت</p>
+                                <div class="series-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-score">۹.۳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="series-card">
+                            <div class="series-poster">
+                                <img src="public/img/777.jpg" alt="Stranger Things" class="img-fluid">
+                                <div class="series-overlay">
+                                    <div class="series-actions">
+                                        <button class="btn-play">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-info">
+                                            <i class="fas fa-info"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="series-badge new">NEW</div>
+                            </div>
+                            <div class="series-info">
+                                <h5 class="series-title">چیزهای عجیب</h5>
+                                <p class="series-meta">۴ فصل • ۳۴ قسمت</p>
+                                <div class="series-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-score">۸.۷</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Latest Trailers Section -->
+        <section class="latest-trailers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-video"></i>
+                        آخرین تریلرها
+                    </h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <div class="main-trailer">
+                            <div class="trailer-box">
+                                <img src="public/img/trailer-793x358.jpg" alt="Main Trailer" class="img-fluid">
+                                <div class="trailer-overlay">
+                                    <button class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                                <div class="trailer-info">
+                                    <h5>تریلر جدید فیلم اکشن</h5>
+                                    <p>۲ روز پیش</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="trailer-list">
+                            <div class="trailer-item active">
+                                <div class="trailer-thumb">
+                                    <img src="public/img/555.jpg" alt="Trailer 1">
+                                    <div class="play-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="trailer-details">
+                                    <h6>تریلر فیلم اکشن ۱</h6>
+                                    <span>۱ روز پیش</span>
+                                </div>
+                            </div>
+                            
+                            <div class="trailer-item">
+                                <div class="trailer-thumb">
+                                    <img src="public/img/666.jpg" alt="Trailer 2">
+                                    <div class="play-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="trailer-details">
+                                    <h6>تریلر فیلم درام ۲</h6>
+                                    <span>۳ روز پیش</span>
+                                </div>
+                            </div>
+                            
+                            <div class="trailer-item">
+                                <div class="trailer-thumb">
+                                    <img src="public/img/777.jpg" alt="Trailer 3">
+                                    <div class="play-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="trailer-details">
+                                    <h6>تریلر فیلم کمدی ۳</h6>
+                                    <span>۵ روز پیش</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Box Office Section -->
+        <section class="box-office-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-trophy"></i>
+                        باکس آفیس هفتگی
+                    </h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="box-office-item rank-1">
+                            <div class="rank-badge">۱</div>
+                            <div class="movie-poster">
+                                <img src="public/img/555.jpg" alt="Movie 1" class="img-fluid">
+                            </div>
+                            <div class="movie-details">
+                                <h5 class="movie-title">اواتار: راه آب</h5>
+                                <p class="movie-genre">علمی تخیلی، ماجراجویی</p>
+                                <div class="movie-stats">
+                                    <div class="revenue">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span>۲۵۰ میلیون دلار</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>۸.۵</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="box-office-item rank-2">
+                            <div class="rank-badge">۲</div>
+                            <div class="movie-poster">
+                                <img src="public/img/666.jpg" alt="Movie 2" class="img-fluid">
+                            </div>
+                            <div class="movie-details">
+                                <h5 class="movie-title">تاپ گان: ماوریک</h5>
+                                <p class="movie-genre">اکشن، درام</p>
+                                <div class="movie-stats">
+                                    <div class="revenue">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span>۱۸۰ میلیون دلار</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>۹.۱</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="box-office-item rank-3">
+                            <div class="rank-badge">۳</div>
+                            <div class="movie-poster">
+                                <img src="public/img/777.jpg" alt="Movie 3" class="img-fluid">
+                            </div>
+                            <div class="movie-details">
+                                <h5 class="movie-title">دکتر استرنج ۲</h5>
+                                <p class="movie-genre">اکشن، فانتزی</p>
+                                <div class="movie-stats">
+                                    <div class="revenue">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span>۱۵۰ میلیون دلار</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>۷.۸</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movie Sliders -->
+        <section class="movie-sliders">
+            <!-- Adventure Movies -->
+            <div class="slider-movie me-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between mb-4 mt-2">
+                        <h5 class="slider-title">
+                            <i class="fas fa-film"></i>
+                            فیلم های ماجراجویی
+                        </h5>
+                        <h5 class="view-all">
+                            مشاهده کامل
+                            <i class="fas fa-arrow-left me-1"></i>
+                        </h5>
+                    </div>
+                    
+                    <div class="swiper movie-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/antman.jpg" alt="Ant-Man">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان مردی که قدرت کوچک شدن دارد و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>مرد مورچه‌ای</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.2</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/batman.jpg" alt="Batman">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان شوالیه تاریکی گاتهام و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>بتمن</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>9.1</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/flash.jpg" alt="Flash">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان سریع‌ترین مرد زنده و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>فلش</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>7.8</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/john.jpg" alt="John Wick">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان قاتل حرفه‌ای بازنشسته که...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>جان ویک</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.9</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/amsterdam-poster.jpg" alt="Amsterdam">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستانی در شهر آمستردام و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>آمستردام</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>7.5</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Movies -->
+            <div class="slider-movie me-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between mb-4 mt-2">
+                        <h5 class="slider-title">
+                            <i class="fas fa-film"></i>
+                            فیلم های اکشن
+                        </h5>
+                        <h5 class="view-all">
+                            مشاهده کامل
+                            <i class="fas fa-arrow-left me-1"></i>
+                        </h5>
+                    </div>
+                    
+                    <div class="swiper movie-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/batman.jpg" alt="Batman">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان شوالیه تاریکی گاتهام و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>بتمن</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>9.1</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/john.jpg" alt="John Wick">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان قاتل حرفه‌ای بازنشسته که...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>جان ویک</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.9</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/flash.jpg" alt="Flash">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان سریع‌ترین مرد زنده و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>فلش</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>7.8</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/antman.jpg" alt="Ant-Man">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان مردی که قدرت کوچک شدن دارد و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>مرد مورچه‌ای</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.2</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drama Movies -->
+            <div class="slider-movie me-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between mb-4 mt-2">
+                        <h5 class="slider-title">
+                            <i class="fas fa-film"></i>
+                            فیلم های درام
+                        </h5>
+                        <h5 class="view-all">
+                            مشاهده کامل
+                            <i class="fas fa-arrow-left me-1"></i>
+                        </h5>
+                    </div>
+                    
+                    <div class="swiper movie-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/777.jpg" alt="Drama Movie 1">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان عمیق و تأثیرگذار درباره...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>فیلم درام ۱</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.5</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/999.jpg" alt="Drama Movie 2">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان احساسی و پرمعنا که...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>فیلم درام ۲</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.7</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crime Movies -->
+            <div class="slider-movie me-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between mb-4 mt-2">
+                        <h5 class="slider-title">
+                            <i class="fas fa-film"></i>
+                            فیلم های جنایی
+                        </h5>
+                        <h5 class="view-all">
+                            مشاهده کامل
+                            <i class="fas fa-arrow-left me-1"></i>
+                        </h5>
+                    </div>
+                    
+                    <div class="swiper movie-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/john.jpg" alt="John Wick">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان قاتل حرفه‌ای بازنشسته که...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>جان ویک</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>8.9</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="item-slider">
+                                    <div class="item-slider-img">
+                                        <img src="public/img/batman.jpg" alt="Batman">
+                                    </div>
+                                    <div class="item-slider-story">
+                                        <h6>خلاصه داستان :</h6>
+                                        <p>داستان شوالیه تاریکی گاتهام و...</p>
+                                    </div>
+                                    <div class="item-slider-name">
+                                        <h5>بتمن</h5>
+                                    </div>
+                                    <div class="item-slider-rate">
+                                        <h6>9.1</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <hr style="color: #CCC">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <span class="pe-5">مووی</span>
+                    <span class="pe-5">قوانین</span>
+                    <span class="pe-5">راهنما</span>
+                </div>
+                <div class="col">
+                    <b>طراحی توسعه توسط تیم مووی کلاب</b>
+                </div>
+                <div class="col">
+                    <button class="btn" style="background: #ca252d; color: white;">ALL SYSTEM</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav d-lg-none d-md-none">
+        <div class="container">
+            <div class="row">
+                <div class="col mobile-nav-item">
+                    <a href="#home">
+                        <i class="fas fa-home" style="font-size: 21px;"></i>
+                        <span class="d-block">خانه</span>
+                    </a>
+                </div>
+                <div class="col mobile-nav-item d-inline">
+                    <a href="#movies">
+                        <i class="fas fa-film" style="font-size: 21px;"></i>
+                        <span class="d-block">فیلم ها</span>
+                    </a>
+                </div>
+                <div class="col mobile-nav-item">
+                    <a href="#series">
+                        <i class="fas fa-tv" style="font-size: 21px;"></i>
+                        <span class="d-block">سریال ها</span>
+                    </a>
+                </div>
+                <div class="col mobile-nav-item">
+                    <a href="login.html">
+                        <i class="fas fa-sign-in-alt" style="font-size: 21px;"></i>
+                        <span class="d-block">ورود</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

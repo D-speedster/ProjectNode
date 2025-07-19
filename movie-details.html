@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات فیلم - سینما آنلاین</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Persian Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="logo-section">
+                        <img src="https://via.placeholder.com/80x80/e50914/ffffff?text=LOGO" alt="لوگو" class="logo-web">
+                        <div class="logo-text">
+                            <h1 class="brand-name">سینما آنلاین</h1>
+                            <p class="brand-slogan">بهترین فیلم‌ها و سریال‌ها</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="header-actions">
+                        <div class="user-menu">
+                            <a href="#" class="login-btn">
+                                <i class="fas fa-user"></i>
+                                <span>ورود / ثبت‌نام</span>
+                            </a>
+                            <a href="#" class="admin-btn">
+                                <i class="fas fa-cog"></i>
+                                <span>پنل مدیریت</span>
+                            </a>
+                        </div>
+                        <div class="header-info">
+                            <div class="info-item">
+                                <i class="fas fa-film"></i>
+                                <span>۱۲۰۰+ فیلم</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tv"></i>
+                                <span>۳۰۰+ سریال</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>خانه</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-film"></i>
+                            <span>فیلم‌ها</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-tv"></i>
+                            <span>سریال‌ها</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-magic"></i>
+                            <span>انیمیشن</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i>
+                            <span>مستند</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-newspaper"></i>
+                            <span>اخبار</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <form class="search-form">
+                        <input type="text" class="search-box" placeholder="جستجوی فیلم، سریال، بازیگر...">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            <span>جستجو</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Movie Details Section -->
+    <section class="movie-details-section">
+        <div class="movie-hero">
+            <div class="movie-backdrop">
+                <img src="https://via.placeholder.com/1920x800/333/fff?text=Movie+Backdrop" alt="پس‌زمینه فیلم">
+                <div class="movie-hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="movie-poster">
+                            <img src="https://via.placeholder.com/400x600/e50914/fff?text=Movie+Poster" alt="پوستر فیلم">
+                            <div class="movie-rating">
+                                <i class="fas fa-star"></i>
+                                <span>۸.۵</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="movie-info">
+                            <h1 class="movie-title">نام فیلم نمونه</h1>
+                            <p class="movie-original-title">Sample Movie Title</p>
+                            <div class="movie-meta">
+                                <span class="movie-year">۲۰۲۳</span>
+                                <span class="movie-duration">۱۲۰ دقیقه</span>
+                                <span class="movie-genre">اکشن، درام</span>
+                                <span class="movie-country">آمریکا</span>
+                            </div>
+                            <p class="movie-description">
+                                این یک توضیح نمونه برای فیلم است. در این قسمت خلاصه‌ای از داستان فیلم، بازیگران اصلی و نکات مهم درباره فیلم ارائه می‌شود. این متن به صورت کامل و جذاب نوشته شده تا کاربران اطلاعات کافی درباره فیلم کسب کنند.
+                            </p>
+                            <div class="movie-actions">
+                                <a href="#" class="btn-watch">
+                                    <i class="fas fa-play"></i>
+                                    <span>تماشای آنلاین</span>
+                                </a>
+                                <a href="#" class="btn-download">
+                                    <i class="fas fa-download"></i>
+                                    <span>دانلود</span>
+                                </a>
+                                <a href="#" class="btn-favorite">
+                                    <i class="fas fa-heart"></i>
+                                    <span>علاقه‌مندی</span>
+                                </a>
+                                <a href="#" class="btn-share">
+                                    <i class="fas fa-share"></i>
+                                    <span>اشتراک‌گذاری</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Details Tabs -->
+        <div class="container mt-5">
+            <div class="movie-tabs">
+                <ul class="nav nav-tabs" id="movieTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="cast-tab" data-bs-toggle="tab" data-bs-target="#cast" type="button" role="tab">
+                            <i class="fas fa-users"></i>
+                            بازیگران و عوامل
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab">
+                            <i class="fas fa-images"></i>
+                            گالری تصاویر
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">
+                            <i class="fas fa-comments"></i>
+                            نظرات کاربران
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="similar-tab" data-bs-toggle="tab" data-bs-target="#similar" type="button" role="tab">
+                            <i class="fas fa-film"></i>
+                            فیلم‌های مشابه
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="movieTabsContent">
+                    <!-- Cast Tab -->
+                    <div class="tab-pane fade show active" id="cast" role="tabpanel">
+                        <div class="cast-section">
+                            <h3>بازیگران اصلی</h3>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 mb-4">
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/200x250/555/fff?text=Actor" alt="بازیگر">
+                                        <div class="cast-info">
+                                            <h5>نام بازیگر</h5>
+                                            <p>نقش در فیلم</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-4">
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/200x250/555/fff?text=Actor" alt="بازیگر">
+                                        <div class="cast-info">
+                                            <h5>نام بازیگر</h5>
+                                            <p>نقش در فیلم</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-4">
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/200x250/555/fff?text=Actor" alt="بازیگر">
+                                        <div class="cast-info">
+                                            <h5>نام بازیگر</h5>
+                                            <p>نقش در فیلم</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-4">
+                                    <div class="cast-card">
+                                        <img src="https://via.placeholder.com/200x250/555/fff?text=Actor" alt="بازیگر">
+                                        <div class="cast-info">
+                                            <h5>نام بازیگر</h5>
+                                            <p>نقش در فیلم</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="mt-4">عوامل فیلم</h3>
+                            <div class="crew-info">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="crew-item">
+                                            <strong>کارگردان:</strong>
+                                            <span>نام کارگردان</span>
+                                        </div>
+                                        <div class="crew-item">
+                                            <strong>نویسنده:</strong>
+                                            <span>نام نویسنده</span>
+                                        </div>
+                                        <div class="crew-item">
+                                            <strong>تهیه‌کننده:</strong>
+                                            <span>نام تهیه‌کننده</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="crew-item">
+                                            <strong>فیلمبردار:</strong>
+                                            <span>نام فیلمبردار</span>
+                                        </div>
+                                        <div class="crew-item">
+                                            <strong>آهنگساز:</strong>
+                                            <span>نام آهنگساز</span>
+                                        </div>
+                                        <div class="crew-item">
+                                            <strong>تدوینگر:</strong>
+                                            <span>نام تدوینگر</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Tab -->
+                    <div class="tab-pane fade" id="gallery" role="tabpanel">
+                        <div class="gallery-section">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 mb-4">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x300/333/fff?text=Gallery+1" alt="تصویر گالری">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 mb-4">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x300/333/fff?text=Gallery+2" alt="تصویر گالری">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 mb-4">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x300/333/fff?text=Gallery+3" alt="تصویر گالری">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 mb-4">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x300/333/fff?text=Gallery+4" alt="تصویر گالری">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 mb-4">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x300/333/fff?text=Gallery+5" alt="تصویر گالری">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 mb-4">
+                                    <div class="gallery-item">
+                                        <img src="https://via.placeholder.com/400x300/333/fff?text=Gallery+6" alt="تصویر گالری">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <div class="reviews-section">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://via.placeholder.com/50x50/e50914/fff?text=U" alt="کاربر">
+                                        <div>
+                                            <h5>نام کاربر</h5>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">۲ روز پیش</span>
+                                </div>
+                                <p class="review-text">
+                                    این فیلم واقعاً فوق‌العاده بود! داستان جذاب، بازی عالی بازیگران و جلوه‌های ویژه بی‌نظیر. حتماً پیشنهاد می‌کنم تماشا کنید.
+                                </p>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://via.placeholder.com/50x50/e50914/fff?text=U" alt="کاربر">
+                                        <div>
+                                            <h5>نام کاربر دیگر</h5>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">۱ هفته پیش</span>
+                                </div>
+                                <p class="review-text">
+                                    یکی از بهترین فیلم‌هایی که تا به حال دیده‌ام. کیفیت تصویر و صدا عالی بود. ممنون از سایت برای ارائه این فیلم.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Similar Movies Tab -->
+                    <div class="tab-pane fade" id="similar" role="tabpanel">
+                        <div class="similar-movies">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                                    <div class="movie-card">
+                                        <img src="https://via.placeholder.com/300x400/555/fff?text=Similar+1" class="card-img-top" alt="فیلم مشابه">
+                                        <div class="card-body">
+                                            <h5 class="card-title">فیلم مشابه ۱</h5>
+                                            <div class="movie-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>۷.۸</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                                    <div class="movie-card">
+                                        <img src="https://via.placeholder.com/300x400/555/fff?text=Similar+2" class="card-img-top" alt="فیلم مشابه">
+                                        <div class="card-body">
+                                            <h5 class="card-title">فیلم مشابه ۲</h5>
+                                            <div class="movie-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>۸.۲</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                                    <div class="movie-card">
+                                        <img src="https://via.placeholder.com/300x400/555/fff?text=Similar+3" class="card-img-top" alt="فیلم مشابه">
+                                        <div class="card-body">
+                                            <h5 class="card-title">فیلم مشابه ۳</h5>
+                                            <div class="movie-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>۷.۵</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                                    <div class="movie-card">
+                                        <img src="https://via.placeholder.com/300x400/555/fff?text=Similar+4" class="card-img-top" alt="فیلم مشابه">
+                                        <div class="card-body">
+                                            <h5 class="card-title">فیلم مشابه ۴</h5>
+                                            <div class="movie-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>۸.۰</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>درباره ما</h5>
+                    <p>سینما آنلاین بهترین مکان برای تماشای فیلم‌ها و سریال‌های روز دنیا است.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>لینک‌های مفید</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">فیلم‌ها</a></li>
+                        <li><a href="#">سریال‌ها</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>شبکه‌های اجتماعی</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; ۲۰۲۳ سینما آنلاین. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
